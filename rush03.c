@@ -23,15 +23,12 @@ void    printer(int x, char start, char middle, char end)
 
 void    tester(int x, int y, int j)
 {
-    // We call the printer function for the header
-    if (j == 1)
-        printer(x, '/', '*', '\\');
-    // We call the printer function for the footer
-    else if (j == y)
-        printer(x, '\\', '*', '/');
+    // We call the printer function for the header and the footer
+    if (j == 1 || j == y)
+        printer(x, 'A', 'B', 'C');
     // We call the printer function for the body
     else
-        printer(x, '*', ' ', '*');
+        printer(x, 'B', ' ', 'B');
 }
 
 void    rush(int x, int y)
